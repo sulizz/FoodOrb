@@ -5,18 +5,28 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { SettingsComponent } from './settings/settings.component';
+import {ListingModule} from '../listing/listing.module'
 
 @NgModule({
-  declarations: [RegisterComponent, LoginComponent, NavbarComponent, ForgetpasswordComponent],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule
-  ], 
-  exports:[
-      RegisterComponent,
-      LoginComponent,
-      NavbarComponent
-  ]
+    declarations: [
+        RegisterComponent,
+        LoginComponent, 
+        NavbarComponent, 
+        ForgetpasswordComponent,
+        SettingsComponent
+    ],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        ListingModule
+    ], 
+    exports:[
+        RegisterComponent,
+        LoginComponent,
+        NavbarComponent,
+        SettingsComponent
+    ]
 })
 export class RegistrationModule { }

@@ -1,0 +1,18 @@
+<app-usernavbar></app-usernavbar>
+<div class="input-group rounded" style="margin-top: 2em">
+    <input type="search" class="form-control rounded" placeholder="Search Food Items" aria-label="Search"
+        aria-describedby="search-addon" />
+</div>
+
+<div style="margin-left: 30em; margin-top: 3em" >
+    <div class="card" style="width: 18rem;" *ngFor="let feed of feedList">
+        <img class="card-img-top" src="{{feed.image_url}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{feed.restaurent_name}}</h5>
+            <p class="card-text">{{feed.description}}, Resturant | Rating: {{feed.rating}}</p>
+            <p class="card-text"> {{feed.cost | currency: 'USD'}}</p>
+            <a style="margin-right: 1em;" href="#" class="btn btn-primary">Add To Cart</a>
+            <a href="#" class="btn btn-primary">Buy/Order</a>
+        </div>
+    </div>
+</div>
