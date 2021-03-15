@@ -1,0 +1,13 @@
+<app-usernavbar></app-usernavbar>
+<h2><span class="badge badge-secondary">Find Friends</span></h2>
+
+<div class="d-flex align-content-stretch flex-wrap">
+    <div class="card" style="width: 18rem;" *ngFor="let friend of friendsList">
+        <div class="card-body">
+            <h5 class="card-title">{{friend.name}}</h5>
+            <p class="card-text">{{friend.email}}</p>
+            <a class="btn btn-primary" (click)="gotoDetails(friend)">Profile</a>
+        </div>
+    </div>
+    
+</div>

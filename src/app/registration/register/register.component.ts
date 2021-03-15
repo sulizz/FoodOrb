@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MustMatch } from '../must-match.validator';
 
 @Component({
@@ -10,7 +11,7 @@ import { MustMatch } from '../must-match.validator';
 export class RegisterComponent implements OnInit {
 
   formModel:FormGroup;
-    constructor(private fb :FormBuilder) {
+    constructor(private fb :FormBuilder,private router: Router) {
         this.formModel = this.fb.group({
             name:['',Validators.required],
             email:['', [Validators.required,Validators.email]],
@@ -34,6 +35,10 @@ export class RegisterComponent implements OnInit {
     //     }
     // }
     ngOnInit(): void {
+    }
+
+    loginSubmit() {
+        this.router.navigate(['/home'])
     }
 
 }

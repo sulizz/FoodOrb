@@ -8,8 +8,9 @@ import {GetFeedService} from '../../get-feed.service'
 })
 export class HomeComponent implements OnInit {
     
-    feedList:any[] = []
+    feedList:any[] = [];
 
+    selected:any[] = [];
     constructor(private _feedService: GetFeedService) { }
     
     ngOnInit(): void {
@@ -19,4 +20,7 @@ export class HomeComponent implements OnInit {
         })
     }
 
+    addOrder(feed:any) {
+        this.selected.push(feed)
+    }
 }

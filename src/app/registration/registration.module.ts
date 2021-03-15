@@ -6,7 +6,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { SettingsComponent } from './settings/settings.component';
-import {ListingModule} from '../listing/listing.module'
+import {ListingModule} from '../listing/listing.module';
+import { ProfileComponent } from './profile/profile.component'
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import {ListingModule} from '../listing/listing.module'
         LoginComponent, 
         NavbarComponent, 
         ForgetpasswordComponent,
-        SettingsComponent
+        SettingsComponent,
+        ProfileComponent
     ],
     imports: [
         CommonModule,

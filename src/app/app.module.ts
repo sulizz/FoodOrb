@@ -12,7 +12,7 @@ import { IndexComponent } from './index/index.component';
 import {RegistrationModule} from './registration/registration.module';
 import {ListingModule} from './listing/listing.module';
 import {OrderingModule} from './ordering/ordering.module'
-
+import {FriendslistModule} from './friendslist/friendslist.module'
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import {OrderingModule} from './ordering/ordering.module'
     RegistrationModule,
     ListingModule,
     ReactiveFormsModule,
-    OrderingModule
+    OrderingModule,
+    FriendslistModule
     
   ],
   providers: [],

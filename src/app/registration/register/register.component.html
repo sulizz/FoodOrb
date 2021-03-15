@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <br>
-<form [formGroup]="formModel">
+<form [formGroup]="formModel" (ngSubmit)="loginSubmit()">
     <div class="form-group">
         <label for="name">Name</label>
         <input formControlName="name" type="text" class="form-control" id="name">
