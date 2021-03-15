@@ -1,21 +1,38 @@
 <app-navbar></app-navbar>
 <br>
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<form [formGroup]="formModel">
+
+    <div class="form-group" >
+        <label for="email">Email address</label>
+        <input formControlName="email" type="email" class="form-control" id="email" required>
+        <div class="alert alert-danger" role="alert"
+            *ngIf="formModel.controls['email'].touched && formModel.controls['email'].invalid">
+            <span *ngIf="formModel.controls['email'].errors?.required">Email is required</span>
+            <span *ngIf="formModel.controls['email'].errors?.email">Email should be valid</span>
+        </div>
     </div>
+
     <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="password">
+        <div class="alert alert-danger" role="alert"
+            *ngIf="formModel.controls['password'].touched && formModel.controls['password'].invalid">
+            <span *ngIf="formModel.controls['password'].errors?.required">Password is required</span>
+            <span *ngIf="formModel.controls['password'].errors?.minLength">hi</span>
+        </div>
     </div>
     <div class="form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+        <label formControlName="password" class="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
     <br>
     <button style="margin-left: 40px;" type="submit" class="btn btn-primary">Login</button>
+
+    <p>
+        Form Status: {{ formModel.status }}
+        
+    </p>
+    <!-- <p>Form Data: {{formModel.value | json }}</p> -->
+
     <a style="padding-left: 40px;" href="#">Forgot Your Password</a>
 </form>

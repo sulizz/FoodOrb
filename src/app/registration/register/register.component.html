@@ -1,1 +1,55 @@
-<p>register works!</p>
+<app-navbar></app-navbar>
+<br>
+<form [formGroup]="formModel">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input formControlName="name" type="text" class="form-control" id="name">
+        <div class="alert alert-danger" role="alert"
+            *ngIf="formModel.controls['name'].touched && formModel.controls['name'].invalid">
+            <span *ngIf="formModel.controls['name'].errors?.required">Name is required</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input formControlName="email" type="email" class="form-control" id="email">
+        <div class="alert alert-danger" role="alert"
+            *ngIf="formModel.controls['email'].touched && formModel.controls['email'].invalid">
+            <span *ngIf="formModel.controls['email'].errors?.required">Email is required</span>
+            <span *ngIf="formModel.controls['email'].errors?.email">Email should be valid</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="password">
+        <div class="alert alert-danger" role="alert"
+            *ngIf="formModel.controls['password'].touched && formModel.controls['password'].invalid">
+            <span *ngIf="formModel.controls['password'].errors?.required">Password is required</span>
+            <span *ngIf="formModel.controls['password'].errors?.minlength">Password should be at least 5 character long</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword"> Confirm Password</label>
+        <input formControlName="confirmPassword" type="password" class="form-control" id="confirmPassword">
+        <div class="alert alert-danger" role="alert"
+            *ngIf="formModel.controls['confirmPassword'].touched && formModel.controls['confirmPassword'].invalid">
+            <span *ngIf="formModel.controls['confirmPassword'].errors?.required">Password is required</span>
+            <span *ngIf="formModel.controls['confirmPassword'].errors?.minlength">Password should be at least 5 character long</span>
+        </div>
+    </div>
+
+    <div>
+        <div formControlName="validator">
+            <div *ngIf="formModel.controls['validator'].invalid">
+                <span *ngIf="formModel.controls['validator'].errors">Password is required</span>
+            </div>
+        </div>
+    </div>
+
+    Form Status: {{ formModel.status }}
+
+    <br>
+    <button style="margin-left: 40px;" type="submit" class="btn btn-primary">Register</button>
+</form>

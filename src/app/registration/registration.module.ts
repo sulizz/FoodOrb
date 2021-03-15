@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 
 @NgModule({
-  declarations: [RegisterComponent, LoginComponent, NavbarComponent],
+  declarations: [RegisterComponent, LoginComponent, NavbarComponent, ForgetpasswordComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ], 
   exports:[
       RegisterComponent,
