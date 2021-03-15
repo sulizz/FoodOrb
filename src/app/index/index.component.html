@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+            <li>
+                <button class="btn btn-default btn-lg" (click) = "gotoLogin()">Login</button>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+            <li>
+                <button class="btn btn-default btn-lg" (click) = "gotoRegister()">Register</button>
             </li>
         </ul>
     </div>
@@ -16,7 +16,7 @@
         <h1 style="margin: auto;width: 65%;">FoodOrb</h1>
         <br>
         <h3>An Angular Application</h3>
-        <a style="margin: auto;width: 90%;" href="#" class="btn btn-default btn-lg">Browse App</a>
+        <button style="margin: auto;width: 90%;" routerLink="/login" class="btn btn-default btn-lg">Browse App</button>
     </div>
 </div>
 
