@@ -1,0 +1,22 @@
+<app-usernavbar></app-usernavbar>
+<button style="width: 10rem; margin-left: 10rem; margin-top: 3rem;" type="button" class="btn btn-outline-secondary"
+    (click)="cancelOrder()">Back to the Menu</button>
+<div class="card" style="width: 60rem; margin-left: 7em; margin-top: 10em" >
+    <div class="card-body">
+
+        <button style="width: 20rem; margin-left: 20rem;" type="button" class="btn btn-outline-primary" (click)="startTimer()">Click to get your order started</button>
+        <h5 class="card-title">Order Details</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{orderDetails}}</h6>
+
+        <h5 class="card-title">Status</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{order}}</h6>
+        <br>
+        <p class="card-text">Remaining time:</p>
+        <p class="card-text">{{timeLeft}}</p>
+        <p class="card-text">Your food is being cooked sit back and relax while our partners deliver hot and yummy food at your doorstep.</p>
+
+        <p>Order ID: {{id}}</p>
+        <button type="button" class="btn btn-outline-danger" (click)="cancelOrder()">Cancel Order</button>
+
+    </div>
+</div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { HomeComponent } from './listing/home/home.component';
+import { TrackingComponent } from './ordering/tracking/tracking.component';
 import { ForgetpasswordComponent } from './registration/forgetpassword/forgetpassword.component';
 import { LoginComponent } from './registration/login/login.component';
 import { RegisterComponent } from './registration/register/register.component';
@@ -34,6 +35,9 @@ const routes: Routes = [
     },{
         path:'settings',
         component:SettingsComponent
+    },{
+        path:'tracking',
+        component:TrackingComponent
     }
 
 ];

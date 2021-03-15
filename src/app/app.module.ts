@@ -11,6 +11,8 @@ import { IndexComponent } from './index/index.component';
 
 import {RegistrationModule} from './registration/registration.module';
 import {ListingModule} from './listing/listing.module';
+import {OrderingModule} from './ordering/ordering.module'
+
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import {ListingModule} from './listing/listing.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RegistrationModule,
     ListingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    OrderingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
