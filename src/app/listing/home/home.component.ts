@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {GetFeedService} from '../../get-feed.service'
 
 @Component({
@@ -8,8 +8,9 @@ import {GetFeedService} from '../../get-feed.service'
 })
 export class HomeComponent implements OnInit {
     
+    
     feedList:any[] = [];
-
+    
     selected:any[] = [];
     constructor(private _feedService: GetFeedService) { }
     
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
             this.feedList = response
         })
     }
-
+    
     addOrder(feed:any) {
         this.selected.push(feed)
     }

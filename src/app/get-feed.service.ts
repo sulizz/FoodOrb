@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 
 @Injectable({
@@ -12,6 +12,7 @@ export class GetFeedService {
     settingsUrl = "http://localhost:9000/api/settings";
     friendsUrl = "http://localhost:9000/api/friends";
     userUrl = "http://localhost:9000/api/users";
+
 
     constructor(private http:HttpClient) { }
 

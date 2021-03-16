@@ -1,0 +1,28 @@
+
+<app-usernavbar></app-usernavbar>
+<br>
+<!-- <app-cart [selected]="selected"></app-cart> -->
+<div class="alert" role="alert">
+    <h3>Contents of your cart</h3>
+    <h6>Total Amount: INR $</h6>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Sr. No.</th>
+            <th scope="col">Order</th>
+            <th scope="col">Cost</th>
+
+        </tr>
+    </thead>
+    <tbody *ngFor ="let select of selected">
+        <tr>
+            <th scope="row">1</th>
+            <td>{{select.description}}</td>
+            <td>{{select.cost}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button style ="margin-right: 1em;"type="button" class="btn btn-outline-secondary" (click)="goHome()">Home</button>
+<button type="button" class="btn btn-outline-primary" (click)="placeOrder()">Place Order</button>

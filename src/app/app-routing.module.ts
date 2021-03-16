@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FriendDetailsComponent } from './friendslist/friend-details/friend-details.component';
 import { FriendsComponent } from './friendslist/friends/friends.component';
 import { IndexComponent } from './index/index.component';
-import { CartComponent } from './listing/cart/cart.component';
+import { CartComponent } from './listing/home/cart/cart.component';
 import { HomeComponent } from './listing/home/home.component';
 import { TrackingComponent } from './ordering/tracking/tracking.component';
 import { ForgetpasswordComponent } from './registration/forgetpassword/forgetpassword.component';
@@ -49,11 +49,11 @@ const routes: Routes = [
         path:'friend/:id',
         component:FriendDetailsComponent
     },{
-        path:'cart',
-        component:CartComponent
-    },{
         path:'profile',
         component:ProfileComponent
+    },{
+        path:'cart',
+        component:CartComponent
     }
 
 ];
